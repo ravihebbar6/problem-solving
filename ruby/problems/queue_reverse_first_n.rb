@@ -1,6 +1,6 @@
 require '../data_structures/queue.rb'
 
-x = Queue.new([])
+x = Queue.new([1])
 p x.size
 p x.list
 

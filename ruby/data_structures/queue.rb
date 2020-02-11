@@ -14,9 +14,12 @@ class Queue
 		return unless items
 		items.each do |item|
 			node = Node.new(item)
-			@front = @rear = node unless @front
-			@rear.next = node
-			@rear = node
+			if @front.nil?
+				@front = @rear = node
+			else
+				@rear.next = node
+				@rear = node
+			end
 		end
 	end
 
